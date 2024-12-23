@@ -1,0 +1,284 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-padding-top: 130px; /* высота header */
+  font-family: Arial, sans-serif;
+  color: #4d4e53;
+}
+
+body {
+  background-color: #f8f8f8;
+}
+
+#header {
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e9f0fe;
+  min-height: 80px; /* Высота header */
+}
+
+main {
+  padding: 20px;
+  margin-top: 125px; /* Отступ равен высоте header + padding */
+}
+
+footer {
+  padding: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+  background-color: white;
+  border-radius: 8px;
+}
+
+section {
+  margin-top: 20px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+section h1,
+h2 {
+  text-align: center;
+  padding: 20px;
+  font-style: italic;
+}
+
+section iframe {
+  display: block;
+  margin: 0 auto;
+  /* padding: 20px 20px 40px 20px; */
+  border-radius: 8px;
+  overflow: hidden;
+  /* border: none; */
+}
+
+#video-section {
+  padding-bottom: 60px;
+}
+
+#contact {
+  margin-bottom: 20px;
+}
+
+.footer-bottom {
+  margin-bottom: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  width: calc(100% / 3);
+}
+
+.logo img {
+  width: 10vw; /* 10% от ширины экрана */
+  height: auto; /* Сохраняет пропорции */
+  max-width: 100px; /* Ограничение для больших экранов */
+}
+
+.text-logo {
+  color: #00528a;
+  margin-left: 10px;
+  font-style: italic;
+}
+
+.nav-link {
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: #4d4e53;
+  cursor: pointer;
+  /* font-weight: bold; */
+}
+
+.nav-link:hover {
+  /* color: #cf0abf;  */
+  background-color: #d7e2f7;
+}
+
+nav li {
+  list-style: none;
+}
+nav > ul {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 2;
+  padding: 10px 20px;
+  font-style: italic;
+}
+
+section ul {
+  font-size: 1.2rem;
+  line-height: 2;
+  margin-left: 30px;
+  padding: 10px 20px;
+}
+
+li {
+  padding: 3px;
+  font-style: italic;
+}
+
+#nav-bar {
+  display: flex;
+  align-items: flex-end;
+  width: calc(100% / 3 * 2);
+  padding: 25px;
+}
+
+#video + p {
+  display: none;
+}
+
+#video:not([src]) + p {
+  display: block;
+}
+#contact-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+#contact-flex > form,
+#contact-flex > p {
+  flex: 1; /* Две равные части */
+}
+
+#form {
+  display: flex;
+  flex-direction: column; /* Элементы внутри формы располагаются вертикально */
+  align-items: center; /* Центрирует элементы по горизонтали */
+  gap: 15px; /* Отступы между элементами */
+  padding-bottom: 20px;
+}
+
+label {
+  font-size: 16px;
+  font-style: italic;
+}
+
+#email {
+  max-width: 275px; /* Устанавливаем ширину для поля ввода */
+  padding: 10px; /* Внутренние отступы для удобства ввода */
+  font-size: 16px; /* Размер шрифта */
+  font-style: italic;
+  border: 1px solid #ccc; /* Рамка поля */
+  border-radius: 5px; /* Скругленные углы */
+}
+
+#submit {
+  max-width: 275px; /* Устанавливаем ширину кнопки */
+  padding: 10px; /* Внутренние отступы */
+  font-size: 16px; /* Размер шрифта */
+  font-style: italic;
+  letter-spacing: 0.08em;
+  color: #fff; /* Цвет текста */
+  font-weight: bold;
+  background-color: #00528a; /* Цвет фона кнопки */
+  border: none; /* Убираем рамку */
+  border-radius: 5px; /* Скругленные углы */
+  cursor: pointer; /* Указатель на кнопку */
+}
+
+#submit:hover {
+  background-color: #536b85;
+}
+
+@media (max-width: 768px) {
+  #header {
+    text-align: center;
+    padding: 5px 15px;
+  }
+
+  .logo img {
+    max-width: 70px;
+  }
+
+  nav #nav-bar {
+    padding: 5px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #contact-flex {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  #form,
+  #contact-flex > p {
+    width: 100%;
+    text-align: center;
+  }
+
+  #email,
+  #submit {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 576px) {
+  #services {
+    padding: 15px;
+  }
+
+  #services h1 {
+    font-size: 1.6rem;
+  }
+
+  #services p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 576px) {
+  body {
+    font-size: 14px;
+  }
+
+  section {
+    padding: 10px;
+  }
+
+  #video {
+    width: 100%;
+    height: auto;
+  }
+
+  #services {
+    padding: 10px;
+  }
+
+  #services h1 {
+    font-size: 1.4rem;
+  }
+
+  #services p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+}
